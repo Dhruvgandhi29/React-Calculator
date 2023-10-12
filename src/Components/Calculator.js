@@ -23,6 +23,9 @@ function Calculator() {
       setRes("0");
     }
   };
+  const calstyle = { height: "100%", width: "70%" };
+  const appstyle = { width: "30%" };
+  const row = { height: "25%" };
   return (
     <div class="background d-flex justify-content-center align-items-center">
       <div class="m-5">
@@ -32,8 +35,8 @@ function Calculator() {
             <div class="result">{res}</div>
           </div>
           <div class="d-flex Buttons m-0 p-0">
-            <div class="buttonsec container-fluid align-items-stretch">
-              <div class="row">
+            <div class="buttonsec d-flex flex-column " style={calstyle}>
+              <div class="row" style={row}>
                 <button class="number col-4" onClick={() => handleClick("1")}>
                   1
                 </button>
@@ -87,7 +90,7 @@ function Calculator() {
                 </button>
               </div>
             </div>
-            <div class="flex-column">
+            <div class="flex-column" style={appstyle}>
               <button class="op" onClick={handleBack}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
